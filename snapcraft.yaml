@@ -1,0 +1,16 @@
+name: neovim
+version: 1.0
+summary: neovim 
+description: |
+  This is the neovim editor
+confinement: strict
+
+apps:
+  nvim:
+    command: usr/local/bin/nvim
+    plugs: [network-bind, home]
+
+parts:
+    neovim:
+        plugin: make
+        source: .
